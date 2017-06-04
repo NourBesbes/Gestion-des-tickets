@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Nbreticketpar" targetNamespace="http://tempuri.org/Nbreticketpar.xsd" xmlns:mstns="http://tempuri.org/Nbreticketpar.xsd" xmlns="http://tempuri.org/Nbreticketpar.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MyProjectBDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MyProjectBDConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MyProjectV2.Properties.Settings.GlobalReference.Default.MyProjectBDConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NombreTicketParEmployeTableAdapter" GeneratorDataComponentClassName="NombreTicketParEmployeTableAdapter" Name="NombreTicketParEmploye" UserDataComponentName="NombreTicketParEmployeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyProjectBDConnectionString (Settings)" DbObjectName="MyProjectBD.dbo.NombreTicketParEmploye" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT responsable, nbreAll, nbreOuvert, nbreFerme FROM dbo.NombreTicketParEmploye</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="responsable" DataSetColumn="responsable" />
+              <Mapping SourceColumn="nbreAll" DataSetColumn="nbreAll" />
+              <Mapping SourceColumn="nbreOuvert" DataSetColumn="nbreOuvert" />
+              <Mapping SourceColumn="nbreFerme" DataSetColumn="nbreFerme" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Nbreticketpar" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Nbreticketpar" msprop:Generator_UserDSName="Nbreticketpar">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NombreTicketParEmploye" msprop:Generator_TableClassName="NombreTicketParEmployeDataTable" msprop:Generator_TableVarName="tableNombreTicketParEmploye" msprop:Generator_TablePropName="NombreTicketParEmploye" msprop:Generator_RowDeletingName="NombreTicketParEmployeRowDeleting" msprop:Generator_RowChangingName="NombreTicketParEmployeRowChanging" msprop:Generator_RowEvHandlerName="NombreTicketParEmployeRowChangeEventHandler" msprop:Generator_RowDeletedName="NombreTicketParEmployeRowDeleted" msprop:Generator_UserTableName="NombreTicketParEmploye" msprop:Generator_RowChangedName="NombreTicketParEmployeRowChanged" msprop:Generator_RowEvArgName="NombreTicketParEmployeRowChangeEvent" msprop:Generator_RowClassName="NombreTicketParEmployeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="responsable" msprop:Generator_ColumnVarNameInTable="columnresponsable" msprop:Generator_ColumnPropNameInRow="responsable" msprop:Generator_ColumnPropNameInTable="responsableColumn" msprop:Generator_UserColumnName="responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nbreAll" msprop:Generator_ColumnVarNameInTable="columnnbreAll" msprop:Generator_ColumnPropNameInRow="nbreAll" msprop:Generator_ColumnPropNameInTable="nbreAllColumn" msprop:Generator_UserColumnName="nbreAll" type="xs:int" minOccurs="0" />
+              <xs:element name="nbreOuvert" msprop:Generator_ColumnVarNameInTable="columnnbreOuvert" msprop:Generator_ColumnPropNameInRow="nbreOuvert" msprop:Generator_ColumnPropNameInTable="nbreOuvertColumn" msprop:Generator_UserColumnName="nbreOuvert" type="xs:int" minOccurs="0" />
+              <xs:element name="nbreFerme" msprop:Generator_ColumnVarNameInTable="columnnbreFerme" msprop:Generator_ColumnPropNameInRow="nbreFerme" msprop:Generator_ColumnPropNameInTable="nbreFermeColumn" msprop:Generator_UserColumnName="nbreFerme" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

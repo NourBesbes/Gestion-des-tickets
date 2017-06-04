@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E760605D-DBB3-4DFE-AF95-AFF6B1549A91}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyProjectV2</RootNamespace>
+    <AssemblyName>MyProjectV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\nour\Desktop\Gestion des TicketsV2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Gestion des tickets</ProductName>
+    <PublisherName>Infratech</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mylogo_oD2_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2AD940DA10A2A6EC775BCC004C46054739187485</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MyProjectV2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AppDomainToolkit, Version=1.0.4.1, Culture=neutral, PublicKeyToken=f2fc7ab5180cf5c4, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\AppDomainToolkit.1.0.4.3\lib\net\AppDomainToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=2.1.267.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="eagetmail">
+      <HintPath>..\..\..\Downloads\eagetmail.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.9.6.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Mono.Cecil.0.9.6.1\lib\net45\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenPop">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xpand.ExpressApp, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.ExpressApp.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Dashboard, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.ExpressApp.Dashboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Dashboard.Win">
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.ExpressApp.Dashboard.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Security, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.ExpressApp.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Security.Win, Version=16.1.3.1, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandSecurityWin.16.1.3.1\lib\net40\Xpand.ExpressApp.Security.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Validation, Version=16.1.3.1, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandValidation.16.1.3.1\lib\net40\Xpand.ExpressApp.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.Win, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.ExpressApp.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.WorldCreator, Version=16.1.3.1, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandWorldCreator.16.1.3.1\lib\net40\Xpand.ExpressApp.WorldCreator.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.ExpressApp.WorldCreator.Win, Version=16.1.3.1, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandWorldCreatorWin.16.1.3.1\lib\net40\Xpand.ExpressApp.WorldCreator.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Persistent.Base, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.Persistent.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Persistent.BaseImpl, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.Persistent.BaseImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Utils, Version=12.2.5.0, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandDashboardWin.12.2.5.14\lib\Xpand.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpand.Xpo, Version=16.1.3.1, Culture=neutral, PublicKeyToken=c52ffed5d5ff0958, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\eXpandLib.16.1.3.1\lib\net40\Xpand.Xpo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrat.Designer.cs">
+      <DependentUpon>Contrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contrats.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMPLOYE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empoyes.cs">
+      <DependentUpon>Empoyes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empoyes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empoyes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscription.Designer.cs">
+      <DependentUpon>Inscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606141131470_InitialCreate.cs" />
+    <Compile Include="Migrations\201606141131470_InitialCreate.Designer.cs">
+      <DependentUpon>201606141131470_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606270804320_AddReponse.cs" />
+    <Compile Include="Migrations\201606270804320_AddReponse.Designer.cs">
+      <DependentUpon>201606270804320_AddReponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606271327243_reponse.cs" />
+    <Compile Include="Migrations\201606271327243_reponse.Designer.cs">
+      <DependentUpon>201606271327243_reponse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606280842098_responsable.cs" />
+    <Compile Include="Migrations\201606280842098_responsable.Designer.cs">
+      <DependentUpon>201606280842098_responsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606280851302_fax.cs" />
+    <Compile Include="Migrations\201606280851302_fax.Designer.cs">
+      <DependentUpon>201606280851302_fax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606280925161_contrat_Id.cs" />
+    <Compile Include="Migrations\201606280925161_contrat_Id.Designer.cs">
+      <DependentUpon>201606280925161_contrat_Id.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier.Designer.cs">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\contrat.cs" />
+    <Compile Include="Model\Dbcontext.cs" />
+    <Compile Include="Model\employe.cs" />
+    <Compile Include="Model\ticket.cs" />
+    <Compile Include="MyProjectBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectBDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectBDDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectBDDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectBDDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectBDDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectBDDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectBDDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyProjectDBDataSetVF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyProjectDBDataSetVF.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Nbreticketpar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nbreticketpar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Statistique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistique.Designer.cs">
+      <DependentUpon>Statistique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supprimer.Designer.cs">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketFerme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketFerme.Designer.cs">
+      <DependentUpon>TicketFerme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketOuvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketOuvert.Designer.cs">
+      <DependentUpon>TicketOuvert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsFerme.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketsFerme.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsOuverts.cs">
+      <DependentUpon>TicketsOuverts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TicketsOuverts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketsOuverts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTickets.Designer.cs">
+      <DependentUpon>ViewTickets.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contrats.xsc">
+      <DependentUpon>Contrats.xsd</DependentUpon>
+    </None>
+    <None Include="Contrats.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Contrats.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Contrats.xss">
+      <DependentUpon>Contrats.xsd</DependentUpon>
+    </None>
+    <None Include="EMPLOYE.xsc">
+      <DependentUpon>EMPLOYE.xsd</DependentUpon>
+    </None>
+    <None Include="EMPLOYE.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMPLOYE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EMPLOYE.xss">
+      <DependentUpon>EMPLOYE.xsd</DependentUpon>
+    </None>
+    <None Include="Empoyes.xsc">
+      <DependentUpon>Empoyes.xsd</DependentUpon>
+    </None>
+    <None Include="Empoyes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Empoyes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Empoyes.xss">
+      <DependentUpon>Empoyes.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet.xsc">
+      <DependentUpon>MyProjectBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectBDDataSet.xss">
+      <DependentUpon>MyProjectBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet1.xsc">
+      <DependentUpon>MyProjectBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectBDDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectBDDataSet1.xss">
+      <DependentUpon>MyProjectBDDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet2.xsc">
+      <DependentUpon>MyProjectBDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectBDDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectBDDataSet2.xss">
+      <DependentUpon>MyProjectBDDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet3.xsc">
+      <DependentUpon>MyProjectBDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectBDDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectBDDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectBDDataSet3.xss">
+      <DependentUpon>MyProjectBDDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet.xsc">
+      <DependentUpon>MyProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet.xss">
+      <DependentUpon>MyProjectDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet1.xsc">
+      <DependentUpon>MyProjectDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet1.xss">
+      <DependentUpon>MyProjectDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet2.xsc">
+      <DependentUpon>MyProjectDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet2.xss">
+      <DependentUpon>MyProjectDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet3.xsc">
+      <DependentUpon>MyProjectDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet3.xss">
+      <DependentUpon>MyProjectDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet4.xsc">
+      <DependentUpon>MyProjectDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet4.xss">
+      <DependentUpon>MyProjectDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet5.xsc">
+      <DependentUpon>MyProjectDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSet5.xss">
+      <DependentUpon>MyProjectDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSetVF.xsc">
+      <DependentUpon>MyProjectDBDataSetVF.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectDBDataSetVF.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyProjectDBDataSetVF.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyProjectDBDataSetVF.xss">
+      <DependentUpon>MyProjectDBDataSetVF.xsd</DependentUpon>
+    </None>
+    <None Include="MyProjectV2_TemporaryKey.pfx" />
+    <None Include="Nbreticketpar.xsc">
+      <DependentUpon>Nbreticketpar.xsd</DependentUpon>
+    </None>
+    <None Include="Nbreticketpar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Nbreticketpar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Nbreticketpar.xss">
+      <DependentUpon>Nbreticketpar.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TicketsFerme.xsc">
+      <DependentUpon>TicketsFerme.xsd</DependentUpon>
+    </None>
+    <None Include="TicketsFerme.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TicketsFerme.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketsFerme.xss">
+      <DependentUpon>TicketsFerme.xsd</DependentUpon>
+    </None>
+    <None Include="TicketsOuverts.xsc">
+      <DependentUpon>TicketsOuverts.xsd</DependentUpon>
+    </None>
+    <None Include="TicketsOuverts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TicketsOuverts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TicketsOuverts.xss">
+      <DependentUpon>TicketsOuverts.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contrat.resx">
+      <DependentUpon>Contrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inscription.resx">
+      <DependentUpon>Inscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606141131470_InitialCreate.resx">
+      <DependentUpon>201606141131470_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606270804320_AddReponse.resx">
+      <DependentUpon>201606270804320_AddReponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606271327243_reponse.resx">
+      <DependentUpon>201606271327243_reponse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606280842098_responsable.resx">
+      <DependentUpon>201606280842098_responsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606280851302_fax.resx">
+      <DependentUpon>201606280851302_fax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606280925161_contrat_Id.resx">
+      <DependentUpon>201606280925161_contrat_Id.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier.resx">
+      <DependentUpon>Modifier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistique.resx">
+      <DependentUpon>Statistique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supprimer.resx">
+      <DependentUpon>Supprimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketFerme.resx">
+      <DependentUpon>TicketFerme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketOuvert.resx">
+      <DependentUpon>TicketOuvert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTickets.resx">
+      <DependentUpon>ViewTickets.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\childish_unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29637.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mylogo_oD2_icon.ico" />
+    <None Include="Resources\Reload-icon1.png" />
+    <None Include="Resources\Reload-icon.png" />
+    <None Include="Resources\Apps-Dialog-Refresh-icon4.png" />
+    <None Include="Resources\Apps-Dialog-Refresh-icon3.png" />
+    <None Include="Resources\Apps-Dialog-Refresh-icon2.png" />
+    <None Include="Resources\Apps-Dialog-Refresh-icon1.png" />
+    <None Include="Resources\Apps-Dialog-Refresh-icon.png" />
+    <None Include="Resources\Logooo.png" />
+    <None Include="Resources\Search-icon3.png" />
+    <None Include="Resources\Search-icon2.png" />
+    <None Include="Resources\Actions-edit-redo-icon.png" />
+    <None Include="Resources\Sans titre-4.png" />
+    <None Include="Resources\Sans titre-3.png" />
+    <None Include="Resources\Sans titre-2.png" />
+    <None Include="Resources\I.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Passwod].png" />
+    <None Include="Resources\UserName].png" />
+    <None Include="Resources\Button-Add-icon.png" />
+    <None Include="Resources\Register-icon.png" />
+    <None Include="Resources\Button-Close-icon.png" />
+    <None Include="Resources\Accept-icon.png" />
+    <None Include="Resources\LogIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

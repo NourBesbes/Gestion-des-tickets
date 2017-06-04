@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyProjectDBDataSet1" targetNamespace="http://tempuri.org/MyProjectDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/MyProjectDBDataSet1.xsd" xmlns="http://tempuri.org/MyProjectDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MyProjectDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MyProjectDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MyProjectV2.Properties.Settings.GlobalReference.Default.MyProjectDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employesTableAdapter" GeneratorDataComponentClassName="employesTableAdapter" Name="employes" UserDataComponentName="employesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MyProjectDBConnectionString (Settings)" DbObjectName="MyProjectDB.dbo.employes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT empl_Id, login, password, nom, prenom, mail, tel FROM dbo.employes 
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="empl_Id" DataSetColumn="empl_Id" />
+              <Mapping SourceColumn="login" DataSetColumn="login" />
+              <Mapping SourceColumn="password" DataSetColumn="password" />
+              <Mapping SourceColumn="nom" DataSetColumn="nom" />
+              <Mapping SourceColumn="prenom" DataSetColumn="prenom" />
+              <Mapping SourceColumn="mail" DataSetColumn="mail" />
+              <Mapping SourceColumn="tel" DataSetColumn="tel" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyProjectDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="MyProjectDBDataSet1" msprop:Generator_UserDSName="MyProjectDBDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="employes" msprop:Generator_TableClassName="employesDataTable" msprop:Generator_TableVarName="tableemployes" msprop:Generator_RowChangedName="employesRowChanged" msprop:Generator_TablePropName="employes" msprop:Generator_RowDeletingName="employesRowDeleting" msprop:Generator_RowChangingName="employesRowChanging" msprop:Generator_RowEvHandlerName="employesRowChangeEventHandler" msprop:Generator_RowDeletedName="employesRowDeleted" msprop:Generator_RowClassName="employesRow" msprop:Generator_UserTableName="employes" msprop:Generator_RowEvArgName="employesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="empl_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnempl_Id" msprop:Generator_ColumnPropNameInRow="empl_Id" msprop:Generator_ColumnPropNameInTable="empl_IdColumn" msprop:Generator_UserColumnName="empl_Id" type="xs:int" />
+              <xs:element name="login" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnPropNameInTable="loginColumn" msprop:Generator_UserColumnName="login" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="password" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_UserColumnName="password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nom" msprop:Generator_ColumnVarNameInTable="columnnom" msprop:Generator_ColumnPropNameInRow="nom" msprop:Generator_ColumnPropNameInTable="nomColumn" msprop:Generator_UserColumnName="nom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prenom" msprop:Generator_ColumnVarNameInTable="columnprenom" msprop:Generator_ColumnPropNameInRow="prenom" msprop:Generator_ColumnPropNameInTable="prenomColumn" msprop:Generator_UserColumnName="prenom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mail" msprop:Generator_ColumnVarNameInTable="columnmail" msprop:Generator_ColumnPropNameInRow="mail" msprop:Generator_ColumnPropNameInTable="mailColumn" msprop:Generator_UserColumnName="mail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tel" msprop:Generator_ColumnVarNameInTable="columntel" msprop:Generator_ColumnPropNameInRow="tel" msprop:Generator_ColumnPropNameInTable="telColumn" msprop:Generator_UserColumnName="tel" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:employes" />
+      <xs:field xpath="mstns:empl_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
